@@ -4,6 +4,7 @@ const route = require('./routes');
 
 const app = express();
 
+app.use(express.json());
 app.use(route);
 
 // eslint-disable-next-line no-console
