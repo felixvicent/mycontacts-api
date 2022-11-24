@@ -11,8 +11,10 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
+    'no-console': 'off',
     'class-methods-use-this': 'off',
     'consistent-return': 'off',
     camelcase: 'off',
+    'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
   },
 };
