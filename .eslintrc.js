@@ -4,17 +4,17 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: 'airbnb-base',
-  overrides: [
-  ],
+  extends: "airbnb-base",
+  overrides: [],
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: "latest",
   },
   rules: {
-    'no-console': 'off',
-    'class-methods-use-this': 'off',
-    'consistent-return': 'off',
-    camelcase: 'off',
-    'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
+    "no-console": "off",
+    "class-methods-use-this": "off",
+    "consistent-return": "off",
+    camelcase: "off",
+    "no-unused-vars": ["error", { argsIgnorePattern: "next" }],
+    quotes: "double",
   },
 };
