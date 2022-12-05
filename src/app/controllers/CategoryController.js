@@ -1,4 +1,4 @@
-const CategoriesRepository = require('../repositories/CategoriesRepository');
+const CategoriesRepository = require("../repositories/CategoriesRepository");
 
 class CategoryController {
   async index(request, response) {
@@ -19,12 +19,12 @@ class CategoryController {
     const { name } = request.body;
 
     if (!name) {
-      return response.status(400).json({ error: 'Name is required' });
+      return response.status(400).json({ error: "Name is required" });
     }
 
     const category = await CategoriesRepository.create({ name });
 
-    response.json(category);
+    response.status(201).json(category);
   }
 
   async update(request, response) {
@@ -32,7 +32,7 @@ class CategoryController {
     const { name } = request.body;
 
     if (!name) {
-      return response.status(400).json({ error: 'Name is required' });
+      return response.status(400).json({ error: "Name is required" });
     }
 
     const category = await CategoriesRepository.update(id, { name });
